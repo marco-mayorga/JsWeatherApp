@@ -7,13 +7,87 @@
         <title><%= htmlWebpackPlugin.options.title %></title>
     </head>
     <body>
-        
+        <nav>
+            <div id="nav-content">
+                <h1 id="logo">Weather App</h1>
+                <div id="search-div">
+                    <input id="search-bar" type="text" placeholder="Search" />
+                    <button>Submit</button>
+                </div>
+            </div>
+        </nav>
+        <div id="content">
+            <div id="current-and-hourly">
+                <div id="current-forecast">
+                    <h1 id="current-location"></h1>
+                    <h2 id="current-location-temp"></h2>
+                    <img id="current-condition-icon" src="" alt="" />
+                    <p id="current-condition-text"></p>
+                    <div id="current-high-low-temp">
+                        <p id="current-high-temp"></p>
+                        <p id="current-low-temp"></p>
+                    </div>
+                </div>
+                <div id="hourly-forecast">
+                    <div class="hourly-forecast-cards">
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                        <div class="hourly-forecast-card"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="seven-day-and-other-info">
+                <div id="seven-day-forecast">
+                    <div class="seven-day-forecast-cards">
+                        <div class="seven-day-forecast-card"></div>
+                        <div class="seven-day-forecast-card"></div>
+                        <div class="seven-day-forecast-card"></div>
+                        <div class="seven-day-forecast-card"></div>
+                        <div class="seven-day-forecast-card"></div>
+                        <div class="seven-day-forecast-card"></div>
+                        <div class="seven-day-forecast-card"></div>
+                    </div>
+                </div>
+                <div id="other-info">
+                    <div class="other-info-cards">
+                        <div class="other-info-card"></div>
+                        <div class="other-info-card"></div>
+                        <div class="other-info-card"></div>
+                        <div class="other-info-card"></div>
+                        <div class="other-info-card"></div>
+                        <div class="other-info-card"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Make this a footer to link back to weather api -->
-        <a href="https://www.weatherapi.com/" title="Free Weather API"
+        <!-- <a href="https://www.weatherapi.com/" title="Free Weather API"
             ><img
                 src="//cdn.weatherapi.com/v4/images/weatherapi_logo.png"
                 alt="Weather data by WeatherAPI.com"
                 border="0"
-        /></a>
+        /></a> -->
     </body>
 </html>
