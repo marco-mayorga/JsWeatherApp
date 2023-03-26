@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+nav {
+    border-bottom: 1px solid black;
+}
+#nav-content {
+    margin: 0 1rem 0 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+#logo {
+    margin-right: auto;
+}
+
+#content {
+    height: calc(100vh - 3rem);
+}
+#current-forecast {
+    background-color: blue;
+    border: 1px solid black;
+    height: 15rem;
+    width: 40rem;
+    margin-top: 2rem;
+}
+#hourly-forecast {
+    margin-top: 3rem;
+    background-color: blue;
+    border: 1px solid black;
+    height: 15rem;
+    width: 40rem;
+}
+
+#current-and-hourly {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#seven-day-and-other-info {
+    background-color: black;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#seven-day-forecast {
+    background-color: blue;
+    border: 1px solid black;
+    height: 40rem;
+}
+#other-info {
+    background-color: red;
+    border: 1px solid black;
+    height: 40rem;
+}
