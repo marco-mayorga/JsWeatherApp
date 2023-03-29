@@ -1,20 +1,11 @@
 import "./style.css";
-import { getForecast } from "./weatherAPI.js";
+import { toUnixTime, getForecast, getIp } from "./weatherAPI.js";
 
 const tempScaleButton = document.querySelector("#temp-scale");
 const form = document.querySelector("#search-form");
 
-// Changes button text from F to C
-tempScaleButton.addEventListener("click", () => {
-    switch (tempScaleButton.textContent) {
-        case "°F":
-            tempScaleButton.textContent = "°C";
-            break;
-        case "°C":
-            tempScaleButton.textContent = "°F";
-            break;
-    }
-});
+getIp();
+tempScale();
 
 // Prevents form from reloading
 
@@ -32,7 +23,16 @@ async function fetchWeather() {
     currentWeatherDom(weatherData);
     hourlyForecastDom(weatherData);
 }
-
+// Changes button text from F to C
+function tempScale() {
+    tempScaleButton.addEventListener("click", () => {
+        if (tempScaleButton.textContent === "°F") {
+            tempScaleButton.textContent = "°C";
+        } else if (tempScaleButton.textContent === "°C") {
+            tempScaleButton.textContent = "°F";
+        }
+    });
+}
 function currentWeatherDom(weatherData) {
     const currentLocationDiv = document.querySelector("#current-location");
     const currentConditionIconDiv = document.querySelector(
@@ -71,10 +71,4 @@ function hourlyForecastDom(weatherData) {
         <img src="${hours[index].condition.icon}" alt="" />
         <div class="hourly-temp">${Math.round(hours[index].temp_f)}°</div>`;
     });
-}
-
-function toUnixTime(unixTime) {
-    let formattedTime = new Date(unixTime);
-    formattedTime.toLocaleTimeString("default");
-    return formattedTime.toLocaleTimeString("default");
 }
