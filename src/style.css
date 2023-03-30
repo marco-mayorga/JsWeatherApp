@@ -1,3 +1,8 @@
+/* 
+To-DO
+ - [] Style the whole page and animate divs
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +12,11 @@ nav {
 }
 body {
     min-height: 100vh;
+}
+#temp-scale {
+    width: 3rem;
+    background-color: rgba(116, 116, 117, 0.089);
+    border: 1px solid black;
 }
 
 #nav-content {
